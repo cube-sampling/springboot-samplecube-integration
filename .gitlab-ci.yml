@@ -1,5 +1,6 @@
 stages:
     - test
+    - build
     - deploy
 variables:
   # This will suppress any download for dependencies and plugins or upload messages which would clutter the console log.
@@ -23,6 +24,18 @@ cache:
     - 'mvn $MAVEN_CLI_OPTS verify'
   except:
     - master
+
+.build: &build
+  stage: build
+  image: maven:3-jdk-11
+  script:
+    - 'mvn $MAVEN_CLI_OPTS package'
+  except:
+    - master
+  artifacts:
+    paths:
+      - target/*.jar
+ 
 .deploy: &deploy
   stage: deploy  
 
