@@ -2,6 +2,7 @@ stages:
     - test
     - build
     - deploy
+
 variables:
   # This will suppress any download for dependencies and plugins or upload messages which would clutter the console log.
   # `showDateTime` will show the passed time in milliseconds. You need to specify `--batch-mode` to make this work.
@@ -25,7 +26,7 @@ cache:
   except:
     - master
 
-.build: &build
+build-maven:
   stage: build
   image: maven:3-jdk-11
   script:
