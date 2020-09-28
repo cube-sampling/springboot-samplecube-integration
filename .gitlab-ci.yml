@@ -30,8 +30,6 @@ cache:
   image: maven:3-jdk-11
   script:
     - 'mvn $MAVEN_CLI_OPTS package'
-  except:
-    - master
   artifacts:
     paths:
       - target/*.jar
