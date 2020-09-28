@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "cube-sampling",
+      "type": "java.lang.String",
+      "description": "Property allowing deployment specific choice of cube sampling algorithm implementations"
+  }
+] }
