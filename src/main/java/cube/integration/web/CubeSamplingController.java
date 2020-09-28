@@ -3,6 +3,7 @@ package cube.integration.web;
 import cube.integration.model.Unit;
 import cube.integration.service.cube.CubeSamplingService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,9 +13,11 @@ import java.util.function.DoubleSupplier;
 
 @RestController
 public class CubeSamplingController {
+
     private CubeSamplingService cubeSamplingService;
 
     @Autowired
+    @Scope("request")
     public void setCubeSamplingService(CubeSamplingService cubeSamplingService) {
         this.cubeSamplingService = cubeSamplingService;
     }

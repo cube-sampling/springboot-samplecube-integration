@@ -10,23 +10,28 @@
 	</parent>
 	<groupId>cube</groupId>
 	<artifactId>integration</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>integration</name>
 	<description>Cube sampling integration</description>
 
 	<properties>
-		<java.version>11</java.version>
+		<java.version>8</java.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-
+	</dependency>
+	<dependency>
+		<groupId>org.cube-sampling</groupId>
+		<artifactId>renjin-sampling-samplecube</artifactId>
+		<version>0.0.1</version>
+		<scope>compile</scope>
+	</dependency>
 		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>

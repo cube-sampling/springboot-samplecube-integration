@@ -2,8 +2,8 @@ package cube.integration.service.cube;
 
 import cube.integration.model.Unit;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
-
 import java.util.Collection;
 import java.util.List;
 import java.util.function.DoubleSupplier;
